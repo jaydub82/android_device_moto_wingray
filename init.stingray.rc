@@ -18,6 +18,8 @@ on fs
     mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/userdata /data wait noatime nosuid nodev nomblk_io_submit
     mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/cache /cache wait noatime nosuid nodev nomblk_io_submit
     mount ext2 /dev/block/platform/sdhci-tegra.3/by-name/pdsb /pds wait ro
+    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/SDC /data/media noatime nosuid nodev nodiratime errors=remount-ro,barrier=0,noauto_da_alloc
+    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/sdcard /data/media noatime nosuid nodev nodiratime errors=remount-ro,barrier=0,noauto_da_alloc
     setprop ro.crypto.fuse_sdcard true
 
 on post-fs-data
