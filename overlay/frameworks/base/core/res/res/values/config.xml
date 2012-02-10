@@ -208,5 +208,9 @@
          prevents us from lowering this to the preferred value without
          causing scroll startup to jump. -->
     <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
+    
+    <!-- Whether to even allow system settings for crt animations
+     setting this to false will completely disable them -->
+    <bool name="config_enableCrtAnimations">false</bool>
 
 </resources>
